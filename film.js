@@ -151,8 +151,11 @@ noteFormElm.addEventListener('submit', (e) => {
 
 	const message = messageInput.value.trim();
 
+	let isValid = true;
+
 	if (message === '') {
 		messageInput.classList.add('is-invalid');
+		isValid = false;
 	} else {
 		messageInput.classList.remove('is-invalid');
 	}
@@ -161,12 +164,15 @@ noteFormElm.addEventListener('submit', (e) => {
 
 	if (!termsCheckbox.checked) {
   		termsCheckbox.classList.add('is-invalid');
+		isValid = false;
 	} else {
   		termsCheckbox.classList.remove('is-invalid');
 	}
 
-	noteFormElm.innerHTML = `<p class="card-text">${messageInput.value}</p>`;
-
+	if(!isValid){
+		return;
+	}
+	noteFormElm.innerHTML = `<p class="card-text">${message}</p>`;
 
 });
 
