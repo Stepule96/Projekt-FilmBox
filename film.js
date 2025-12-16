@@ -104,3 +104,69 @@ const filmy = [
 		premiera: '2022-12-24',
 	},
 ]
+
+//Detail filmu
+
+const detailOfFilmElm = document.querySelector('#detail-filmu');
+
+const idFilm = location.hash.slice(1);
+
+let selectedFilm;
+
+
+filmy.forEach ((film) => {
+	if(film.id === idFilm){
+		selectedFilm = film;
+	}
+})
+
+console.log(selectedFilm);
+
+detailOfFilmElm.querySelector('.card-title').textContent = selectedFilm.nazev;
+detailOfFilmElm.querySelector('.card-text').textContent = selectedFilm.popis;
+
+const img = detailOfFilmElm.querySelector('img');
+img.src = selectedFilm.plakat.url;
+img.alt = selectedFilm.nazev;
+
+
+//Premiera
+
+const premieraElm = document.querySelector('#premiera');
+const premieraDate = dayjs(selectedFilm.premiera);
+const formatDate = premieraDate.format('D.M.YYYY');
+
+premieraElm.innerHTML = `Premiéra <strong>${formatDate}</strong>`;
+
+
+//Poznamka
+
+const noteFormElm = document.querySelector('#note-form');
+
+noteFormElm.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	const messageInput = noteFormElm.querySelector('#message-input');
+	console.log(messageInput.value);
+
+	const message = messageInput.value.trim();
+
+	if (message === '') {
+		messageInput.classList.add('is-invalid');
+	} else {
+		messageInput.classList.remove('is-invalid');
+	}
+
+	const termsCheckbox = noteFormElm.querySelector('#terms-checkbox');
+
+	if (!termsCheckbox.checked) {
+  		termsCheckbox.classList.add('is-invalid');
+	} else {
+  		termsCheckbox.classList.remove('is-invalid');
+	}
+
+	noteFormElm.innerHTML = `<p class="card-text">${messageInput.value}</p>`;
+
+
+});
+
