@@ -1,3 +1,5 @@
+//Hamburger menu
+
 const menuButtonElm = document.querySelector('#menu-tlacitko');
 const menuItemsElm = document.querySelector('#menu-polozky');
 

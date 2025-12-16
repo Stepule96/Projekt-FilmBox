@@ -105,6 +105,8 @@ const filmy = [
 	},
 ]
 
+//Seznam filmu
+
 const listOfFilmsElm = document.querySelector('#seznam-filmu');
 
 listOfFilmsElm.innerHTML = '';
