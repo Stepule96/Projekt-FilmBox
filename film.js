@@ -113,7 +113,64 @@ const idFilm = location.hash.slice(1);
 
 let selectedFilm;
 
+//Přidání filmů 
+filmy.push({
 
+		id: 'frankenstein',
+		nazev: 'Frankenstein',
+		plakat: {
+			url: 'https://image.pmgstatic.com/cache/resized/w663/files/images/film/posters/170/427/170427208_9okuik.jpg',
+			sirka: 663,
+			vyska: 909,
+		},
+		ochutnavka: 'Moderní sci-fi horor inspirovaný klasikou o stvoření života.',
+		popis:
+			'Ve futuristickém světě roku 2025 se ambiciózní vědec Victor Frank převtělí do moderního Frankensteina a rozhodne se vytvořit dokonalou lidskou bytost. Jeho experiment však rychle překročí hranice vědy i morálky, když jeho stvoření začne žít vlastním životem – inteligentní, silné a s nevyzpytatelnými emocemi. Frank se tak ocitá v závodě s časem, aby napravil chybu, kterou způsobil, než jeho výtvor zničí vše, co miluje. Moderní zpracování klasického příběhu zkoumá, co to znamená být člověkem a jak daleko může věda opravdu zajít.',
+		premiera: '2025-10-17',
+	},
+	{
+		id: 'zapisnik',
+		nazev: 'Zápisník jedné lásky',
+		plakat: {
+			url: 'https://image.pmgstatic.com/cache/resized/w663/files/images/film/posters/164/951/164951100_a3d50f.jpg',
+			sirka: 663,
+			vyska: 909,
+		},
+		ochutnavka: 'Dojemný romantický příběh o lásce, která překoná čas i osud.',
+		popis:
+			'Ve snímku Zápisník jedné lásky předčítá starý muž ze svého vybledlého zápisníku pacientce (Gena Rowlands) v sanatoriu příběh o jediné ženě svého života. Ve filmu se přenášíme do minulosti a sledujeme životy dvou mladých lidí ze Severní Karolíny, kteří pocházejí z naprosto odlišného prostředí, Allie (Rachel McAdams) a Noaha (Ryan Gosling). Ačkoliv Allie byla vychována v nádherném přepychovém jižanském domě a Noah vyrostl v chudém stavení, na jehož prahu džemovali hudebníci, nic mladé dvojici nezabrání v tom, aby spolu nestrávili jedno nádherné léto předtím než je odloučí nejprve rodiče, a poté druhá světová válka. Když se vojáci po válce vrátí domů, všechno je jinak. Allie je zasnoubena s úspěšným podnikatelem a Noah žije sám se svými vzpomínkami ve 200 let starém domě, který nádherně restauruje. Když však Allie zahlédne v místních novinách článek o Noahově práci, ví, že ho musí vyhledat a rozhodnout se jednou provždy, zda-li poslechnout své srdce nebo rozum.',
+		premiera: '2004-06-25',
+	},
+	{
+		id: 'shawsank',
+		nazev: 'Vykoupení z věznice Shawshank',
+		plakat: {
+			url: 'https://image.pmgstatic.com/cache/resized/w663/files/images/film/posters/162/505/162505167_735db9.jpg',
+			sirka: 663,
+			vyska: 909,
+		},
+		ochutnavka: 'Silné vězeňské drama o naději, přátelství a svobodě.',
+		popis:
+			'Strach dělá z lidí vězně. Naděje jim dává křídla. Film natočený podle novely Stephena Kinga. Strhující příběh o přátelství, naději a moudrosti s velmi výraznými hereckými i charakterovými osobnostmi. Andy Dufresne (Tim Robbins) přichází do vězení v Shawshanku jako nový vězeň podezřelý z vraždy. Spřátelí se s doživotně odsouzeným Redem (Morgan Freeman) a společně se snaží přežít v nelidském prostředí vězeňského systému. Odmítají upadnout do rezignace a dodávají naději sobě i spoluvězňům. Film získal mnoho ocenění filmové kritiky a díky svému hluboce humánnímu poselství, skvělým hereckým výkonům a působivému zpracování byl 7 x nominován na Oscara - za nejlepší film, herce v hlavní roli (Morgan Freeman), nejlepší scénář, kameru, hudbu, střih a zvuk.',
+		premiera: '1994-09-23',
+	},
+	{
+		id: 'krkavci',
+		nazev: 'Sedmero krkavců',
+		plakat: {
+			url: 'https://image.pmgstatic.com/cache/resized/w1326/files/images/film/posters/159/737/159737119_76afaa.jpg',
+			sirka: 663,
+			vyska: 909,
+		},
+		ochutnavka: 'Pohádkový příběh o odvaze, oběti a síle sesterské lásky.',
+		popis:
+			'Pohádkový příběh vychází z klasické pohádky Boženy Němcové "Sedmero krkavců". Mladá dívka na sebe bere těžký úkol. Musí se pokusit zachránit své bratry a zbavit je prokletí, které na ně uvrhla jejich matka. Je to příběh o odvaze, vytrvalosti, ale také síle slova, pravdy a opravdové lásky... Hlavní hrdinkou je mladá dívka Bohdanka, která se narodí do utrápené rodiny pekaře, jehož žena před lety v návalu vzteku proklela sedm svých synů a z těch se stali krkavci. Rodiče před Bohdankou toto rodinné neštěstí tají. Když se Bohdanka na prahu dospělosti dozví o prokletí své rodiny, rozhodne se, že musí bratry zachránit. Od místní čarodějky se jí dostane rady, že musí svým bratrům ušít košile. Ale ne lecjaké - sama bez pomoci musí natrhat kopřivy, zpracovat vlákna, utkat látku a ušít každý steh. Bohdanka se vydává na dlouhou cestu za záchranou svým bratrů.',
+		premiera: '2015-01-15',
+	},
+
+);
+
+//Detail filmu
 filmy.forEach ((film) => {
 	if(film.id === idFilm){
 		selectedFilm = film;

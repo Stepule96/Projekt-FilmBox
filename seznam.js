@@ -148,7 +148,7 @@ filmy.push({
 		},
 		ochutnavka: 'Silné vězeňské drama o naději, přátelství a svobodě.',
 		popis:
-			'Ve futuristickém světě roku 2025 se ambiciózní vědec Victor Frank převtělí do moderního Frankensteina a rozhodne se vytvořit dokonalou lidskou bytost. Jeho experiment však rychle překročí hranice vědy i morálky, když jeho stvoření začne žít vlastním životem – inteligentní, silné a s nevyzpytatelnými emocemi. Frank se tak ocitá v závodě s časem, aby napravil chybu, kterou způsobil, než jeho výtvor zničí vše, co miluje. Moderní zpracování klasického příběhu zkoumá, co to znamená být člověkem a jak daleko může věda opravdu zajít.',
+			'Strach dělá z lidí vězně. Naděje jim dává křídla. Film natočený podle novely Stephena Kinga. Strhující příběh o přátelství, naději a moudrosti s velmi výraznými hereckými i charakterovými osobnostmi. Andy Dufresne (Tim Robbins) přichází do vězení v Shawshanku jako nový vězeň podezřelý z vraždy. Spřátelí se s doživotně odsouzeným Redem (Morgan Freeman) a společně se snaží přežít v nelidském prostředí vězeňského systému. Odmítají upadnout do rezignace a dodávají naději sobě i spoluvězňům. Film získal mnoho ocenění filmové kritiky a díky svému hluboce humánnímu poselství, skvělým hereckým výkonům a působivému zpracování byl 7 x nominován na Oscara - za nejlepší film, herce v hlavní roli (Morgan Freeman), nejlepší scénář, kameru, hudbu, střih a zvuk.',
 		premiera: '1994-09-23',
 	},
 	{
