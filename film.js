@@ -223,6 +223,7 @@ noteFormElm.addEventListener('submit', (e) => {
 
 	if (message === '') {
 		messageInput.classList.add('is-invalid');
+		messageInput.focus();
 		isValid = false;
 	} else {
 		messageInput.classList.remove('is-invalid');
@@ -230,8 +231,9 @@ noteFormElm.addEventListener('submit', (e) => {
 
 	const termsCheckbox = noteFormElm.querySelector('#terms-checkbox');
 
-	if (!termsCheckbox.checked) {
+	if (isValid && !termsCheckbox.checked) {
   		termsCheckbox.classList.add('is-invalid');
+		termsCheckbox.focus(); 
 		isValid = false;
 	} else {
   		termsCheckbox.classList.remove('is-invalid');
