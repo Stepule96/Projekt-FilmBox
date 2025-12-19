@@ -195,6 +195,17 @@ const formatDate = premieraDate.format('D.M.YYYY');
 
 premieraElm.innerHTML = `Premiéra <strong>${formatDate}</strong>`;
 
+//Ubehlo dni
+
+const today = dayjs();
+const diffDays = premieraDate.diff(today, 'days');
+
+if (diffDays >= 0) {
+	premieraElm.innerHTML = `Premiéra <strong>${formatDate}</strong> je za ${diffDays} dní.`;
+} else {
+	premieraElm.innerHTML = `Premiéra <strong>${formatDate}</strong> proběhla před ${Math.abs(diffDays)} dny.`;
+};
+
 
 //Poznamka
 
